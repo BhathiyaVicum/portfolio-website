@@ -1,0 +1,102 @@
+* {
+    font-family: "Poppins";
+}
+
+/* Navbar background */
+.navbar {
+    background-color: #272727;
+}
+
+/* Container for nav items */
+.nav-bar {
+    background-color: #545454;
+    border-radius: 16px;
+    padding: 6px 1px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Compact nav links */
+.nav-link {
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    min-width: 80px;    
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 4px 12px;   /* smaller vertical padding */
+    line-height: 1.5;      /* keeps text tight */
+    font-size: 15px; 
+    font-family:  "Poppins";
+}
+
+/* Hover effect */
+.nav-link:hover {
+    background-color: white;
+    color: #272727;
+}
+
+/* Active state */
+.nav-link.active {
+    background-color: white;
+    color: #272727 !important;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.contact-btn {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #272727;
+    transition: all 0.3s ease;
+    display: inline-block; /* so padding applies properly */
+}
+
+/* Hover effect */
+.contact-btn:hover {
+    background-color: #545454;
+    color: white; 
+}
+
+/* Hero Section */
+
+.hero-section {
+    min-height: 90vh;
+    background-color: #272727;
+    color: white;
+}
+
+.available-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #00542F;
+  color: #03F187;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  background: #03F187;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.download-btn {
+    background-color: #3155D2;
+    border-radius: 15px;
+    padding: 2px 15px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
