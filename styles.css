@@ -7,17 +7,15 @@
     background-color: #272727;
 }
 
-/* Container for nav items */
 .nav-bar {
-    background-color: #545454;
+    background: linear-gradient(180deg, #424242, #4c4c4c);
     border-radius: 16px;
     padding: 6px 1px;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    
 }
 
-/* Compact nav links */
 .nav-link {
     color: white;
     background-color: transparent;
@@ -25,19 +23,17 @@
     min-width: 80px;    
     text-align: center;
     transition: all 0.3s ease;
-    padding: 4px 12px;   /* smaller vertical padding */
-    line-height: 1.5;      /* keeps text tight */
-    font-size: 15px; 
+    padding: 4px 12px;
+    line-height: 1.5;
+    font-size: 15px;
     font-family:  "Poppins";
 }
 
-/* Hover effect */
 .nav-link:hover {
     background-color: white;
     color: #272727;
 }
 
-/* Active state */
 .nav-link.active {
     background-color: white;
     color: #272727 !important;
@@ -47,35 +43,74 @@
     color: white;
 }
 
+.navbar-brand h4:hover {
+    color: white;
+}
+
 .contact-btn {
     background-color: white;
     border-radius: 15px;
     padding: 5px 15px;
     text-decoration: none;
     color: #272727;
-    transition: all 0.3s ease;
-    display: inline-block; /* so padding applies properly */
+    transition: all 0.5s ease;
+    display: inline-block;
 }
 
 /* Hover effect */
 .contact-btn:hover {
-    background-color: #545454;
+    background: linear-gradient(180deg, #424242, #4c4c4c);
     color: white; 
 }
 
 /* Hero Section */
 
 .hero-section {
-    min-height: 90vh;
-    background-color: #272727;
-    color: white;
+  min-height: 80vh;
+  background-color: #272727;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background video (no negative z-index) */
+.hero-section .bg-video {
+  position: absolute;
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #272727fa;
+  z-index: 1;
+}
+
+/* Ensure content stays above video */
+.hero-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-img {
+  transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.1) rotate(-3deg);
 }
 
 .available-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 12px;
+  padding: 4px 12px;
   background: #00542F;
   color: #03F187;
   border-radius: 20px;
@@ -92,11 +127,50 @@
 }
 
 .download-btn {
+    font-size: 15px;
     background-color: #3155D2;
-    border-radius: 15px;
-    padding: 2px 15px;
+    border-radius: 12px;
+    padding: 4px 14px;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
     display: inline-block;
+}
+
+.download-btn:hover {
+    background-color: #87a1ff;
+    color: white;
+}
+
+.hero-icons {
+    font-size: 25px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.hero-icons:hover {
+    color: #545454;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #ffffff, #d1d1d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent; 
+}
+
+/* About Section */
+
+.about-section {
+    min-height: 50vh;
+    background-color: #272727;
+    color: white;
+}
+
+.about-box {
+    background-color: #353535;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1200px;
 }
