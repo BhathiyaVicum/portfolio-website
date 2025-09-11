@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   background-color: #2d2d2d; 
-  box-shadow: 0 2px 6px rgba(26, 26, 26, 0.3);
+  box-shadow: 0 2px 6px rgba(26, 26, 26, 0.673);
 }
 
 .nav-link {
@@ -165,7 +165,7 @@
 /* About Section */
 
 .about-section {
-  min-height: 100vh;
+  min-height: 85vh;
   color: white;
   background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
   background-size: 600% 600%;
@@ -178,13 +178,6 @@
   100% { background-position: 0% 50%; }
 }
 
-.about-box {
-  background-color: #353535;
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 1100px;
-}
-
 .about-box-in {
   border-radius: 20px;
   max-width: 1100px;
@@ -194,19 +187,7 @@
   background-color: #353535;
   padding: 30px;
   border-radius: 20px;
-  max-width: 1100px;
-  transition: all 0.4s ease-in-out;
-}
-
-.about-box-1:hover {
-  box-shadow: 0 0 15px 3px rgba(0, 123, 255, 0.345), inset 0 0 0 1px #007bffb7;
-  transform: translateY(-5px); 
-}
-
-.section-heading {
-    border: 1px solid white;
-    padding: 5px 10px;
-    border-radius: 20px;
+  max-width: auto;
 }
 
 .review-box {
@@ -228,6 +209,39 @@
   font-size: 14px;
   line-height: 19px;
   color: #8d8d8d;
+}
+
+.tech-section {
+  min-height: 60vh;
+  color: white;
+  background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
+  background-size: 600% 600%;
+  animation: gradientBG 5s ease infinite;
+}
+
+.tech-box {
+  padding: 30px;
+  border-radius: 20px;
+  width: auto;
+}
+
+.tech-item {
+  background-color: #353535;
+  border-radius: 15px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  background-color: #444;
+}
+
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* For small screens */
@@ -265,7 +279,6 @@
     text-align: center;
     padding: 5px 0;
     font-size: 15px;
-    /* background: linear-gradient(180deg, #424242, #4c4c4c); */
     background-color: #3155D2;
     color: rgb(208, 208, 208) !important;
   }
@@ -294,13 +307,21 @@
 
   .about-section {
     min-height: 100vh;
-    padding: 20px;
+    padding: 70px 20px;
   }
 
   .review-box {
     margin-top: 20px;
     width: auto;
     height: auto;    
+  }
+
+  .contact-info-box {
+    display: none;
+  }
+
+  .tech-text {
+    display: none;
   }
 
 }
