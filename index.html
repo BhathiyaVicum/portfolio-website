@@ -127,8 +127,8 @@
                     <div class="about-box-in">
 
                         <div class="review-box p-4">
-                            <h5><i class="bi bi-code-slash me-2"></i> Web Development</h5>
-                            <p class="mb-0">Building responsive and functional web applications.</p>
+                            <h5><i class="bi bi-code-slash me-2"></i> Software & App Development</h5>
+                            <p class="mb-0">Building web apps, mobile apps, and desktop software solutions tailored to user needs.</p>
                         </div>
 
                         <div class="review-box p-4 mt-2">
@@ -138,12 +138,7 @@
 
                         <div class="review-box p-4 mt-2">
                             <h5><i class="bi bi-cloud me-2"></i> Graphic Design</h5>
-                            <p class="mb-0">Crafting visually compelling graphicsto enhance digital content.</p>
-                        </div>
-
-                        <div class="review-box p-4 mt-2">
-                            <h5><i class="bi bi-bar-chart-line me-2"></i> Data & Analytics</h5>
-                            <p class="mb-0">Analyzing and visualizing data for impactful insights.</p>
+                            <p class="mb-0">Crafting visually compelling graphics to enhance digital content.</p>
                         </div>
 
                     </div>
@@ -162,16 +157,15 @@
             const heroSection = document.querySelector("#home");
 
             window.addEventListener("scroll", function () {
-            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
 
-            if (window.scrollY >= heroBottom - 50) {
+                if (window.scrollY >= heroBottom - 50) {
                 navbar.classList.add("fixed");
-            } else {
+                } else {
                 navbar.classList.remove("fixed");
-            }
+                }
             });
         });
-
 
         var swiper = new Swiper(".mySwiper", {
         spaceBetween: 10,
