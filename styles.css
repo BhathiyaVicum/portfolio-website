@@ -75,6 +75,7 @@
   color: #272727;
   transition: all 0.5s ease;
   display: inline-block;
+  font-size: 16px;
 }
 
 /* Hover effect */
@@ -145,7 +146,7 @@
 }
 
 .hero-icons {
-  font-size: 25px;
+  font-size: 26px;
   color: white;
   transition: all 0.3s ease;
 }
@@ -254,11 +255,11 @@
 
   .nav-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     margin-top: 10px;
-    justify-content: left;
-    background: linear-gradient(180deg, #424242, #4c4c4c) !important;
+    justify-content: center;
+    align-items: stretch;
   }
 
   .nav-item {
@@ -280,11 +281,11 @@
     padding: 5px 0;
     font-size: 15px;
     background-color: #3155D2;
-    color: rgb(208, 208, 208) !important;
+    color: white !important;
   }
 
   .hero-section {
-    min-height: 70vh;
+    min-height: 75vh;
     padding: 20px;
   }
 
