@@ -9,7 +9,7 @@
 }
 
 .nav-bar {
-   background-color: #464646;
+  background-color: #464646;
   border-radius: 16px;
   padding: 6px 1px;
   display: flex;
@@ -24,7 +24,6 @@
   background-color: rgba(45, 45, 45, 0.7);
   z-index: 1000;
   transition: all 0.10s ease;
-  opacity: 1;
 }
 
 .navbar.fixed {
@@ -32,7 +31,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #2d2d2d; /* solid background after hero */
+  background-color: #2d2d2d; 
   box-shadow: 0 2px 6px rgba(26, 26, 26, 0.3);
 }
 
@@ -86,7 +85,7 @@
 
 /* Hero Section */
 .hero-section {
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: #272727;
   color: white;
   overflow: hidden;
@@ -234,9 +233,14 @@
 /* For small screens */
 @media (max-width: 992px) {
 
+  .navbar {
+    position: relative;
+    background-color: #2d2d2d;
+  }
+
   .nav-bar {
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     width: 100%;
     margin-top: 10px;
     justify-content: left;
