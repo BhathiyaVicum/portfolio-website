@@ -249,9 +249,7 @@ background-color: #2d2d2d;
 .tech-section {
   min-height: 60vh;
   color: white;
-  background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
-  background-size: 600% 600%;
-  animation: gradientBG 5s ease infinite;
+  background: #272727;
 }
 
 .tech-box {
