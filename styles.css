@@ -202,8 +202,7 @@
 }
 
 .review-box:hover {
-  box-shadow: 0 0 15px 3px rgba(0, 123, 255, 0.345), inset 0 0 0 1px #007bffb7;
-  transform: translateY(-5px); 
+  transform: translateY(-3px); 
 }
 
 .review-box p {
@@ -267,7 +266,7 @@ background-color: #2d2d2d;
 }
 
 .tech-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   background-color: #444;
 }
 
@@ -344,7 +343,6 @@ background-color: #2d2d2d;
   }
 
   .review-box {
-    margin-top: 20px;
     width: auto;
     height: auto;    
   }
@@ -354,7 +352,7 @@ background-color: #2d2d2d;
   }
 
   .tech-section {
-    min-height: 40vh;
+    min-height: 50vh;
     padding: 40px 20px;
   }
   
@@ -364,6 +362,6 @@ background-color: #2d2d2d;
 
   .edu-exp-section {
     min-height: 55vh;
-    padding: 55px 20px;
+    padding: 40px 20px;
   }
 }
