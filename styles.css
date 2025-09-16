@@ -101,10 +101,10 @@
 .hero-section h1 {
   font-size: 50px;
 }
-
+/* 
 .hero-section h1 {
-  font-size: 50px;
-}
+  font-size: 55px !important;
+} */
 
 .hero-section .hero-p {
   color: #e3e3e3;
@@ -223,7 +223,7 @@
 /* Edu & Exp Section */
 
 .edu-exp-section {
-  min-height: 50vh;
+  min-height: 60vh;
   color: white;
   background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
   background-size: 600% 600%;
@@ -240,7 +240,7 @@
 }
 
 .edu-exp-box:hover {
-background-color: #2d2d2d;
+ background-color: #2d2d2d;
 }
 
 .edu-exp-text {
@@ -255,7 +255,7 @@ background-color: #2d2d2d;
 /* Tech Stack section */
 
 .tech-section {
-  min-height: 60vh;
+  min-height: 75vh;
   color: white;
   background: #272727;
 }
@@ -283,6 +283,59 @@ background-color: #2d2d2d;
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+/* Project Section */
+
+.project-section {
+  min-height: 90vh;
+  color: white;
+  background: #272727;
+}
+
+.project-card {
+  background-color: #424242;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 1px #666666a1;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  background: #343434;
+}
+
+.img-box {
+  padding: 5px;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-img-top {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.readmore-btn {
+  box-shadow: inset 0 0 0 1px #828282a1;
+  border-radius: 10px;
+  color: #e3e3e3;
+  transition: all .5s;
+}
+
+.readmore-btn:hover {
+  background-color: #e3e3e3;
+  box-shadow: none;
 }
 
 /* For small screens */
