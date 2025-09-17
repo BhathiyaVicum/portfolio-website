@@ -394,7 +394,7 @@ body {
 /* Contact Section */
 
 .contact-section {
-  min-height: 85vh;
+  min-height: 80vh;
   background: #272727;
   background-size: 600% 600%;
   animation: gradientBG 5s ease infinite;
@@ -419,7 +419,7 @@ body {
 .msg-btn {
   background-color: #353535;
   box-shadow: inset 0 0 0 1px #828282a1;
-  border-radius: 14px;
+  border-radius: 13px;
   color: white;
   transition: all .5s;
 }
@@ -433,6 +433,28 @@ body {
   border-radius: 10px;
   background-color: #353535;
   padding: 5px 8px;
+}
+
+footer {
+  color: #8d8d8d;
+  background: #343434;
+  padding: 30px 0px;
+  text-align: center;
+  justify-content: center;
+}
+
+.contact-link-text {
+  font-size: 15px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: #353535;
+  transition: all .5s;
+}
+
+.contact-link-text:hover {
+  color: #343434 !important;
+  background-color: #e3e3e3;
+  box-shadow: none;
 }
 
 /* For small screens */
@@ -585,7 +607,12 @@ body {
 
   .contact-heading {
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+  }
+
+  .contact-link-text {
+    font-size: 13px;
+    padding: 5px 10px;
   }
 
 }
