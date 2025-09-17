@@ -95,10 +95,6 @@ body {
 .hero-section h1 {
   font-size: 50px;
 }
-/* 
-.hero-section h1 {
-  font-size: 55px !important;
-} */
 
 .hero-section .hero-p {
   color: #e3e3e3;
@@ -334,9 +330,9 @@ body {
 
 /* For small screens */
 @media (max-width: 992px) {
-
+  
   .navbar {
-    position: relative;
+    position: fixed;
     background-color: #2d2d2d;
   }
 
@@ -420,4 +416,10 @@ body {
     min-height: 60vh;
     padding: 44px 20px;
   }
+
+  .project-section {
+    min-height: 90vh;
+    padding: 70px 20px;
+  }
+
 }
