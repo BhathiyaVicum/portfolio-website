@@ -395,7 +395,7 @@ body {
 
 .contact-section {
   min-height: 85vh;
-  background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
+  background: #272727;
   background-size: 600% 600%;
   animation: gradientBG 5s ease infinite;
   color: white;
@@ -433,10 +433,6 @@ body {
   border-radius: 10px;
   background-color: #353535;
   padding: 5px 8px;
-}
-
-.contact-left-side {
-
 }
 
 /* For small screens */
@@ -581,6 +577,15 @@ body {
 
   .contact-form-container {
     padding: 15px;
+  }
+
+  .form-control {
+    font-size: 13px;
+  }
+
+  .contact-heading {
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 
 }
