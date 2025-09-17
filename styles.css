@@ -403,7 +403,6 @@ body {
 
 .contact-form-container {
   background-color: #1f1f1f;
-  
   box-shadow: inset 0 0 0 1px #828282a1;
   border-radius: 20px;
   padding: 30px;
@@ -578,6 +577,10 @@ body {
   .contact-section {
     min-height: 40vh;
     padding: 60px 30px;
+  }
+
+  .contact-form-container {
+    padding: 15px;
   }
 
 }
