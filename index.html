@@ -297,7 +297,7 @@
         
     </section>
 
-    <section class="project-section  d-flex align-items-center justify-content-center" id="projects">
+    <section class="project-section d-flex align-items-center justify-content-center" id="projects">
 
         <div class="container">
 
@@ -307,9 +307,8 @@
                     <h4 class="mb-0"><i class="bi bi-kanban me-2"></i>Projects</h4>
                 </div>
 
-                <div class="row g-4">
-
-                    <!-- Project Card 1 -->
+                <div class="row g-4 d-none d-md-flex">
+                    
                     <div class="col-md-3">
                         <div class="card project-card">
                             <div class="img-box">
@@ -325,7 +324,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Card 2 -->
                     <div class="col-md-3">
                         <div class="card project-card">
                             <div class="img-box">
@@ -341,7 +339,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Card 3 -->
                     <div class="col-md-3">
                         <div class="card project-card">
                             <div class="img-box">
@@ -357,7 +354,6 @@
                         </div>
                     </div>
 
-                    <!-- Project Card 4 -->
                     <div class="col-md-3">
                         <div class="card project-card">
                             <div class="img-box">
@@ -372,11 +368,83 @@
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
 
-                <!-- Project 1 Modal -->
-                <div class="modal fade" id="project1Modal" tabindex="-1">
+                <!-- Mobile Swiper -->
+                <div class="swiper mySwiper d-md-none mt-4">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="card project-card">
+                                <div class="img-box">
+                                <img src="images/project1.png" class="card-img-top" alt="Project 1">
+                                </div>
+                                <div class="card-body text-center">
+                                <h6 class="card-title">Hospital Management</h6>
+                                <p class="small">PHP, MySQL, Bootstrap</p>
+                                <button class="btn btn-sm readmore-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                    Read More
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="card project-card">
+                                <div class="img-box">
+                                <img src="images/project1.png" class="card-img-top" alt="Project 1">
+                                </div>
+                                <div class="card-body text-center">
+                                <h6 class="card-title">Hospital Management</h6>
+                                <p class="small">PHP, MySQL, Bootstrap</p>
+                                <button class="btn btn-sm readmore-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                    Read More
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="card project-card">
+                                <div class="img-box">
+                                <img src="images/project1.png" class="card-img-top" alt="Project 1">
+                                </div>
+                                <div class="card-body text-center">
+                                <h6 class="card-title">Hospital Management</h6>
+                                <p class="small">PHP, MySQL, Bootstrap</p>
+                                <button class="btn btn-sm readmore-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                    Read More
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card project-card">
+                                <div class="img-box">
+                                <img src="images/project1.png" class="card-img-top" alt="Project 1">
+                                </div>
+                                <div class="card-body text-center">
+                                <h6 class="card-title">Hospital Management</h6>
+                                <p class="small">PHP, MySQL, Bootstrap</p>
+                                <button class="btn btn-sm readmore-btn" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                    Read More
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next swiper-btn"></div>
+                    <div class="swiper-button-prev swiper-btn"></div>
+                        
+                </div>
+                    
+            </div>
+
+            <!-- Project 1 Modal -->
+            <div class="modal fade" id="project1Modal" tabindex="-1">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content bg-dark text-light">
                     <div class="modal-header">
@@ -390,10 +458,10 @@
                     </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <!-- Project 2 Modal -->
-                <div class="modal fade" id="project2Modal" tabindex="-1">
+            <!-- Project 2 Modal -->
+            <div class="modal fade" id="project2Modal" tabindex="-1">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content bg-dark text-light">
                     <div class="modal-header">
@@ -407,57 +475,41 @@
                     </div>
                     </div>
                 </div>
-                </div>
-
-                
             </div>
+           
 
         </div>
 
     </section>
+
+    <section class="project-section d-flex align-items-center justify-content-center" id="projects">
+
+        <div class="container">
+        </div>
     
+    </section>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-
+            
         var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5500,
+            loop: true,
+            autoplay: {
+            delay: 30000,
             disableOnInteraction: false,
-        },
-        pagination: {
+            },
+            pagination: {
             el: ".swiper-pagination",
             clickable: true,
-        },
-        breakpoints: {
-            640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
             },
-            768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
             },
-            1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            },
-        }
         });
-
-        document.addEventListener("mousemove", (e) => {
-            document.body.style.setProperty("--x", e.clientX + "px");
-            document.body.style.setProperty("--y", e.clientY + "px");
-        });
-
         
-
     </script>
 
 
