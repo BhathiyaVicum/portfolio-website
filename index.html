@@ -415,27 +415,12 @@
         </div>
 
     </section>
-
     
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navbar = document.querySelector(".navbar");
-            const heroSection = document.querySelector("#home");
-
-            window.addEventListener("scroll", function () {
-                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-
-                if (window.scrollY >= heroBottom - 60) {
-                navbar.classList.add("fixed");
-                } else {
-                navbar.classList.remove("fixed");
-                }
-            });
-        });
 
         var swiper = new Swiper(".mySwiper", {
         spaceBetween: 10,
