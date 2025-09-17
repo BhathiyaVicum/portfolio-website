@@ -391,11 +391,20 @@ body {
   box-shadow: none;
 }
 
+/* Contact Section */
+
+.contact-section {
+  min-height: 75vh;
+  background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
+  background-size: 600% 600%;
+  animation: gradientBG 5s ease infinite;
+}
+
 /* For small screens */
 @media (max-width: 992px) {
 
   body {
-    padding-top: 50px;
+    padding-top: 55px;
   }
 
   .navbar {
@@ -435,7 +444,7 @@ body {
   }
 
   .hero-section {
-    min-height: 75vh;
+    min-height: 80vh;
     padding: 20px;
   }
 
