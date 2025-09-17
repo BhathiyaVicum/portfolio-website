@@ -394,10 +394,50 @@ body {
 /* Contact Section */
 
 .contact-section {
-  min-height: 75vh;
+  min-height: 85vh;
   background: linear-gradient(270deg, #2d2d2d, #272727, #1f1f1f);
   background-size: 600% 600%;
   animation: gradientBG 5s ease infinite;
+  color: white;
+}
+
+.contact-form-container {
+  background-color: #1f1f1f;
+  
+  box-shadow: inset 0 0 0 1px #828282a1;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.contact-right-side {
+  background: #2d2d2d;
+  box-shadow: inset 0 0 0 1px #828282a1;
+  border-radius: 15px;
+  padding: 30px;
+  color: white;
+}
+
+.msg-btn {
+  background-color: #353535;
+  box-shadow: inset 0 0 0 1px #828282a1;
+  border-radius: 14px;
+  color: white;
+  transition: all .5s;
+}
+
+.msg-btn:hover {
+  background-color: #e3e3e3;
+  box-shadow: none;
+}
+
+.contact-icon{
+  border-radius: 10px;
+  background-color: #353535;
+  padding: 5px 8px;
+}
+
+.contact-left-side {
+
 }
 
 /* For small screens */
@@ -535,5 +575,9 @@ body {
     right: 35% !important;
   }
 
+  .contact-section {
+    min-height: 40vh;
+    padding: 60px 30px;
+  }
 
 }
