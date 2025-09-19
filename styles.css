@@ -44,7 +44,6 @@ body {
   padding: 4px 12px;
   line-height: 1.5;
   font-size: 15px;
-  font-family: "Poppins";
 }
 
 .nav-link:hover {
@@ -421,6 +420,7 @@ body {
   border-radius: 13px;
   color: white;
   transition: all .5s;
+  padding: 5px;
 }
 
 .msg-btn:hover {
@@ -434,17 +434,9 @@ body {
   padding: 5px 8px;
 }
 
-footer {
-  color: #8d8d8d;
-  background: #343434;
-  padding: 30px 0px;
-  text-align: center;
-  justify-content: center;
-}
-
 .contact-link-text {
   font-size: 15px;
-  padding: 5px 20px;
+  padding: 5px 15px;
   border-radius: 10px;
   background-color: #353535;
   transition: all .5s;
@@ -454,6 +446,15 @@ footer {
   color: #343434 !important;
   background-color: #e3e3e3;
   box-shadow: none;
+}
+
+/* Footer */
+footer {
+  color: #8d8d8d;
+  background: #343434;
+  padding: 30px 0px;
+  text-align: center;
+  justify-content: center;
 }
 
 /* For small screens */
