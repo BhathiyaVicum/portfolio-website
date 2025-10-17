@@ -28,6 +28,7 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3 nav-bar-bg fixed-top">
         <div class="container">
 
@@ -115,12 +116,12 @@
                 <div class="col-md-12">
 
                     <div class="text-center" data-aos="fade-up">
-                        <h4><i class="bi bi-lightbulb-fill me-2"></i></i>What I Do?</h4>
+                        <h2 class="section-title"><i class="bi bi-lightbulb-fill me-2"></i></i>What I Do?</h2>
                     </div>
 
                     <div class="about-box-1 mt-4" data-aos="fade-up">
 
-                        <p class="mb-0 fw-light about-para">
+                        <p class="mb-0 about-para">
                             I’m a Software Engineering student passionate about crafting digital experiences.
                             My focus spans application development, UI/UX design, and emerging technologies.
                             I enjoy building responsive, functional apps and creating intuitive, user-friendly
@@ -135,31 +136,51 @@
 
             <div class="row mt-md-3 mt-1 g-3">
 
-                <div class="col-md-3">
-                    <div class="review-box p-4" data-aos="fade-up">
-                        <h6><i class="bi bi-code-slash me-2"></i> App Development</h6>
-                        <p class="mb-0">Building web, mobile, and desktop solutions tailored to user needs.</p>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <i class="bi bi-code-slash "></i>
+                        </div>
+                        <h4 class="skill-title">App Development</h4>
+                        <p class="skill-description mb-0">
+                            Building web, mobile, and desktop solutions tailored to user needs with modern technologies.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="review-box p-4" data-aos="fade-up">
-                        <h6><i class="bi bi-cpu me-2"></i> AI & Machine Learning</h6>
-                        <p class="mb-0">Exploring intelligent systems that adapt and learn from data.</p>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h4 class="skill-title">AI & Machine Learning</h4>
+                        <p class="skill-description mb-0">
+                            Exploring intelligent systems that adapt and learn from data to solve complex problems.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="review-box p-4" data-aos="fade-up">
-                        <h6><i class="bi bi-brush me-2"></i> UI/UX Design</h6>
-                        <p class="mb-0">Designing clean, intuitive, and user-friendly interfaces.</p>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h4 class="skill-title">UI/UX Design</h4>
+                        <p class="skill-description mb-0">
+                            Designing clean, intuitive, and user-friendly interfaces that enhance user experience.
+                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="review-box p-4" data-aos="fade-up">
-                        <h6><i class="bi bi-palette me-2"></i> Graphic Design</h6>
-                        <p class="mb-0">Crafting visually compelling graphics to enhance digital content.</p>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h4 class="skill-title">Graphic Design</h4>
+                        <p class="skill-description mb-0">
+                            Crafting visually compelling graphics to enhance digital content and brand identity.
+                        </p>
                     </div>
                 </div>
 
@@ -180,7 +201,10 @@
                     <div class="tech-box">
 
                         <div class="text-center" data-aos="fade-up">
-                            <h4 class="mb-4"><i class="bi bi-stack me-2"></i>Tech Stack</h4>
+                            <h2 class="section-title mb-3"><i class="bi bi-stack me-2"></i>Tech Stack</h2>
+                            <p class="section-subtitle">
+                                Technologies and tools I use to bring ideas to life.
+                            </p>
                         </div>
 
                         <div class="row g-3">
@@ -711,6 +735,7 @@
 
     <script>
 
+        // Initialize Swiper
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
@@ -727,16 +752,29 @@
             },
         });
 
+        // Initialize AOS
         AOS.init({
             duration: 900,
             once: true
         });
 
+        // Remove AOS from Projects title on small screens
         document.addEventListener("DOMContentLoaded", function () {
             if (window.innerWidth < 768) {
                 document.getElementById("projects-title").removeAttribute("data-aos");
             }
         });
+
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
 
     </script>
 
