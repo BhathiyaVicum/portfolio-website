@@ -290,7 +290,7 @@ body {
 
 .about-section {
   min-height: 95vh;
-  color: white;
+  color: var(--text-primary);
 }
 
 .about-bg {
@@ -676,8 +676,9 @@ footer {
   }
 
   .tech-section {
-    min-height: 75vh;
-    padding: 40px 20px;
+    min-height: 80vh;
+    padding: 70px 20px;
+    
   }
 
   .tech-text {
@@ -685,8 +686,8 @@ footer {
   }
 
   .edu-exp-section {
-    min-height: 60vh;
-    padding: 44px 20px;
+    min-height: 90vh;
+    padding: 10px 20px;
   }
 
   .project-section {
