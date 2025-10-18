@@ -287,11 +287,69 @@
                                     <span class="tech-text ms-2">Illustrator</span>
                                 </div>
                             </div>
+                            
                             <div class="col-md-2 col-sm-6 col-4">
                                 <div class="tech-item d-flex align-items-center justify-content-center p-3"
                                     data-aos="fade-up">
                                     <img src="images/Photoshop.png" alt="Photoshop" class="tech-icon">
                                     <span class="tech-text ms-2">Photoshop</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item position-relative d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up" data-aos-delay="100">
+                                    <img src="images/Tailwind.png" alt="Tailwind CSS" class="tech-icon">
+                                    <span class="tech-text ms-2">Tailwind CSS</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up" data-aos-delay="500">
+                                    <img src="images/Canva.png" alt="Canva" class="tech-icon">
+                                    <span class="tech-text ms-2">Canva</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item position-relative d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up">
+                                    <span class="badge position-absolute top-0 end-0 m-2"
+                                        style="font-size: 10px;">Beginner</span>
+                                    <img src="images/React.png" alt="React" class="tech-icon">
+                                    <span class="tech-text ms-2">React</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item position-relative d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up" data-aos-delay="200">
+                                    <span class="badge position-absolute top-0 end-0 m-2"
+                                        style="font-size: 10px;">Beginner</span>
+                                    <img src="images/Blender.png" alt="Blender" class="tech-icon">
+                                    <span class="tech-text ms-2">Blender</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item position-relative d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up" data-aos-delay="300">
+                                    <span class="badge position-absolute top-0 end-0 m-2"
+                                        style="font-size: 10px;">Beginner</span>
+                                    <img src="images/Nodejs.png" alt="Node.js" class="tech-icon">
+                                    <span class="tech-text ms-2">Node.js</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-4">
+                                <div class="tech-item position-relative d-flex align-items-center justify-content-center p-3"
+                                    data-aos="fade-up" data-aos-delay="400">
+                                    <span class="badge  position-absolute top-0 end-0 m-2"
+                                        style="font-size: 10px;">Beginner</span>
+                                    <img src="images/MongoDB.png" alt="MongoDB" class="tech-icon">
+                                    <span class="tech-text ms-2">MongoDB</span>
                                 </div>
                             </div>
 
@@ -817,28 +875,28 @@
 
         // Back to top button
         const backToTopButton = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', function() {
+
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
             } else {
                 backToTopButton.classList.remove('show');
             }
         });
-        
-        backToTopButton.addEventListener('click', function(e) {
+
+        backToTopButton.addEventListener('click', function (e) {
             e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({

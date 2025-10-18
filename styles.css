@@ -384,6 +384,15 @@ body {
   object-fit: contain;
 }
 
+.badge {
+  background: var(--primary);
+  color: #000;
+  font-weight: 400;
+  box-shadow: 0 0 6px rgba(38, 15, 241, 0.6);
+  border-radius: 8px;
+}
+
+
 /* Edu & Exp Section */
 
 .edu-exp-section {
@@ -766,6 +775,10 @@ footer {
     display: none;
   }
 
+  .badge {
+    visibility: hidden;
+  }
+
   .edu-exp-section {
     min-height: 90vh;
     padding: 50px 20px;
@@ -849,7 +862,7 @@ footer {
   }
 
   .back-to-top.show {
-  visibility: hidden;
-}
+    visibility: hidden;
+  }
 
 }
