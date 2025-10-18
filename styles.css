@@ -573,7 +573,7 @@ body {
 
 .contact-details h5 {
   margin-bottom: 0.25rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .contact-details p {
@@ -848,5 +848,8 @@ footer {
     margin: 0 auto 30px;
   }
 
+  .back-to-top.show {
+  visibility: hidden;
+}
 
 }
