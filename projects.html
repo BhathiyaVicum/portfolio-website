@@ -19,31 +19,25 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark p-3 nav-bar-bg fixed-top">
-        <div class="container">
-
-            <a class="navbar-brand" href="index.html">
-                <img src="images/portfolio-logo.png" class="img-fluid logo" alt="Logo">
-            </a>
-
-            <!-- Contact Button -->
-            <div class="d-flex ms-auto">
-                <a href="index.html" class="contact-btn px-3"><i class="bi bi-arrow-left-short"></i> Back</a>
-            </div>
-
-        </div>
-    </nav>
-
     <!-- Projects Page Main Content -->
-    <section class="projects-page-section d-flex align-items-center justify-content-center" id="projects-page">
+    <section class="projects-page-section mt-0" id="projects-page">
+
         <div class="hero-bg"></div>
         <div class="container">
-            <div class="text-center my-5" data-aos="fade-up">
-                <h2 class="section-title"><i class="bi bi-kanban me-2"></i>All Projects</h2>
+
+            <div class="projects-header position-relative mb-4" data-aos="fade-up">
+
+                <a href="index.html" class="back-btn">
+                    <i class="bi bi-arrow-left-short"></i>
+                    <span class="back-text">Back</span>
+                </a>
+                <h2 class="section-title text-center mb-0">
+                    All Projects
+                </h2>
+
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-12 text-center">
                     <div class="filter-buttons">
                         <button class="btn filter-btn active" data-filter="all">All</button>
@@ -106,7 +100,7 @@
         // Function to render projects
         function renderProjects(projectsToRender) {
             const container = document.getElementById('projects-container');
-            container.innerHTML = ''; // Clear existing content
+            container.innerHTML = '';
 
             if (projectsToRender.length === 0) {
                 container.innerHTML = '<div class="col-12 text-center"><p>No projects found in this category.</p></div>';
@@ -225,7 +219,6 @@
         }
     </script>
 
-    <!-- Add a little extra styling for the filter buttons and category tags -->
     <style>
         .filter-buttons {
             display: flex;
@@ -260,7 +253,7 @@
 
         .projects-page-section {
             min-height: 100vh;
-            padding: 0px 0 80px 0;
+            padding: 0px 0px 80px 0;
             position: relative;
         }
 
@@ -294,6 +287,71 @@
 
         .modal-footer {
             border-top: 1px solid var(--border-color);
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 60px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            padding: 10px 18px;
+            border-radius: 50px;
+
+            text-decoration: none;
+            color: white;
+
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(10px);
+
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .back-btn i {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        /* Mobile Style */
+        @media (max-width: 768px) {
+
+            .back-btn {
+                width: 42px;
+                height: 42px;
+                padding: 0;
+                border-radius: 50%;
+            }
+
+            .back-text {
+                display: none;
+            }
+
+            .back-btn i {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
         }
     </style>
 </body>

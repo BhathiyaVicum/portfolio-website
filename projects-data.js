@@ -48,5 +48,54 @@ const projectsData = [
         liveLink: "https://your-portfolio-live-link.com",
         githubLink: "https://github.com/BhathiyaVicum/portfolio-website",
         linkedinLink: null
+    },
+    {
+        id: 5,
+        title: "Mr.Barber UI/UX Design",
+        category: "UI/UX Design",
+        image: "images/project-imgs/1.png",
+        technologies: ["Figma"],
+        description: "Designed and prototyped a mobile barber appointment booking system using Figma",
+        longDescription: "Designed and prototyped a mobile barber appointment booking system using Figma. Created multiple UI iterations and improved design based on user feedback.",
+        liveLink: "https://www.figma.com/proto/hNcQbBj5RIlARdOeppMoJ2/Mr.-Barber-UI?node-id=187-1868&p=f&t=mejyVBcYLJHgU4aa-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=187%3A1868",
+        githubLink: null,
+        linkedinLink: null
+    },
+    {
+        id: 6,
+        title: "Sales Analysis System",
+        category: "Desktop App",
+        image: "images/project-imgs/2.png",
+        technologies: ["Java", "MySQL","Swing"],
+        description: " The system automates the manual sales data analysis process, providing management with actionable insights for strategic decision-making.",
+        longDescription: "Designed and prototyped a mobile barber appointment booking system using Figma. Created multiple UI iterations and improved design based on user feedback.",
+        liveLink: null,
+        githubLink: "https://github.com/BhathiyaVicum/Sales-Data-Analysis-App",
+        linkedinLink: null
+    },
+    {
+        id: 7,
+        title: "Prompt Enhancer",
+        category: "Web App",
+        image: "images/project-imgs/3.png",
+        technologies: ["React", "Tailwind CSS", "Groq API"],
+        description: " A modern React web application that enhances raw user prompts into clear, structured, and effective AI-ready prompts using the Groq API.",
+        longDescription: "A modern React web application that enhances raw user prompts into clear, structured, and effective AI-ready prompts using the Groq API (LLaMA 3.3 70B).",
+        liveLink: null,
+        githubLink: "https://github.com/BhathiyaVicum/prompt-enhancer",
+        linkedinLink: null
+    },
+    {
+        id: 8,
+        title: "Music Player App",
+        category: "Web App",
+        image: "images/project-imgs/4.png",
+        technologies: ["Flask", "Python", "HTML", "CSS", "JS", "Bootstrap"],
+        description: " A modern Flask web application that provides a sleek interface for playing music.",
+        longDescription: "A modern Flask web application that provides a sleek interface for playing music with a responsive design.",
+        liveLink: null,
+        githubLink: "https://github.com/BhathiyaVicum/Music-Player-Web-App",
+        linkedinLink: null
     }
+    
 ];
