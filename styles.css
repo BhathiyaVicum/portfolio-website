@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+body.projects-page {
+    padding-top: 30px;
+}
+
 /* Navbar */
 
 .logo {
