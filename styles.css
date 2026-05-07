@@ -29,7 +29,7 @@ body {
 }
 
 body.projects-page {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 /* Navbar */
@@ -884,6 +884,10 @@ footer {
 
   .back-to-top.show {
     visibility: hidden;
+  }
+
+  body.projects-page {
+    padding-top: 15px;
   }
 
 }
