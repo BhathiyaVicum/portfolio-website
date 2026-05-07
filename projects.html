@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 nav-bar-bg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <img src="images/portfolio-logo.png" class="img-fluid logo" alt="Logo">
+            </a>
+
+            <!-- Contact Button -->
+            <div class="d-flex ms-auto">
+                <a href="index.html" class="contact-btn px-3"><i class="bi bi-arrow-left-short"></i> Back</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Projects Page Main Content -->
+    <section class="projects-page-section d-flex align-items-center justify-content-center" id="projects-page">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="text-center my-5" data-aos="fade-up">
+                <h2 class="section-title"><i class="bi bi-kanban me-2"></i>All Projects</h2>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="filter-buttons">
+                        <button class="btn filter-btn active" data-filter="all">All</button>
+                        <button class="btn filter-btn" data-filter="Web App">Web Apps</button>
+                        <button class="btn filter-btn" data-filter="UI/UX Design">UI/UX Design</button>
+                        <button class="btn filter-btn" data-filter="Desktop App">Desktop Apps</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Projects Grid -->
+            <div class="row g-4" id="projects-container">
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalTitle">Project Title</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="projectModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <p class="mb-0">© 2025 Bhathiya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="projects-data.js"></script> <!-- Link to your data file -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 900,
+            once: true
+        });
+
+        // Function to render projects
+        function renderProjects(projectsToRender) {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = ''; // Clear existing content
+
+            if (projectsToRender.length === 0) {
+                container.innerHTML = '<div class="col-12 text-center"><p>No projects found in this category.</p></div>';
+                return;
+            }
+
+            projectsToRender.forEach(project => {
+                // Create the technology badges HTML
+                const techBadges = project.technologies.map(tech =>
+                    `<span class="techn-box me-1 mb-1">${tech}</span>`
+                ).join('');
+
+                // Determine the primary link
+                let primaryLink = project.liveLink || project.githubLink || project.linkedinLink;
+                let buttonText = 'View Project';
+                if (project.liveLink) buttonText = 'Live Demo';
+                else if (project.githubLink) buttonText = 'GitHub Repo';
+                else if (project.linkedinLink) buttonText = 'LinkedIn Post';
+                else buttonText = 'Coming Soon';
+
+                const projectCard = `
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${project.id * 100}">
+                        <div class="card project-card h-100">
+                            <div class="img-box">
+                                <img src="${project.image}" class="card-img-top" alt="${project.title}">
+                            </div>
+                            <div class="card-body text-center d-flex flex-column">
+                                <h6 class="card-title">${project.title}</h6>
+                                <p class="small mb-2">
+                                    <span class="techn-box-category">${project.category}</span>
+                                </p>
+                                <p class="card-text small flex-grow-1">${project.description}</p>
+                                <div class="tech-stack mt-2 mb-3">
+                                    ${techBadges}
+                                </div>
+                                ${primaryLink ?
+                        `<a href="${primaryLink}" target="_blank" class="btn btn-sm readmore-btn mt-auto">${buttonText}</a>` :
+                        `<button class="btn btn-sm readmore-btn mt-auto" data-bs-toggle="modal" data-bs-target="#projectModal" data-project-id="${project.id}">Read More</button>`
+                    }
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += projectCard;
+            });
+
+            // Add click event listeners to Read More buttons that open the modal
+            document.querySelectorAll('[data-bs-toggle="modal"][data-project-id]').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const projectId = parseInt(button.getAttribute('data-project-id'));
+                    const project = projectsData.find(p => p.id === projectId);
+                    if (project) {
+                        // Populate the modal
+                        document.getElementById('projectModalTitle').innerText = project.title;
+                        const modalBody = document.getElementById('projectModalBody');
+                        const techBadges = project.technologies.map(tech =>
+                            `<span class="techn-box me-1">${tech}</span>`
+                        ).join('');
+
+                        // Generate links HTML
+                        let linksHtml = '';
+                        if (project.liveLink) linksHtml += `<a href="${project.liveLink}" target="_blank" class="btn btn-view me-2"><i class="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>`;
+                        if (project.githubLink) linksHtml += `<a href="${project.githubLink}" target="_blank" class="btn btn-view me-2"><i class="bi bi-github me-1"></i>GitHub</a>`;
+                        if (project.linkedinLink) linksHtml += `<a href="${project.linkedinLink}" target="_blank" class="btn btn-view"><i class="bi bi-linkedin me-1"></i>LinkedIn Post</a>`;
+
+                        modalBody.innerHTML = `
+                            <img src="${project.image}" class="img-fluid mb-3 rounded" alt="${project.title}">
+                            <p><strong>Category:</strong> ${project.category}</p>
+                            <p>${project.longDescription || project.description}</p>
+                            <p class="small mb-2"><strong>Technologies:</strong><br> ${techBadges}</p>
+                            ${linksHtml ? `<div class="mt-3">${linksHtml}</div>` : '<p class="text-muted">No external links available for this project.</p>'}
+                        `;
+                    }
+                });
+            });
+        }
+
+        // Filter functionality
+        function setupFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+                    if (filterValue === 'all') {
+                        renderProjects(projectsData);
+                    } else {
+                        const filteredProjects = projectsData.filter(project => project.category === filterValue);
+                        renderProjects(filteredProjects);
+                    }
+                });
+            });
+        }
+
+        // Initial render
+        renderProjects(projectsData);
+        setupFilters();
+
+        // Back to top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            backToTopButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+    <!-- Add a little extra styling for the filter buttons and category tags -->
+    <style>
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 30px;
+            padding: 6px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .techn-box-category {
+            padding: 2px 8px;
+            background-color: var(--primary-dark);
+            font-size: 11px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .projects-page-section {
+            min-height: 100vh;
+            padding: 0px 0 80px 0;
+            position: relative;
+        }
+
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-view {
+            background: transparent;
+            border-radius: 8px;
+            font-size: 13px;
+            box-shadow: inset 0 0 0 1px #828282a1;
+            color: #e3e3e3;
+            padding: 5px 12px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-view:hover {
+            background-color: #e3e3e3;
+            color: var(--dark-bg);
+            box-shadow: none;
+        }
+
+        .modal-footer {
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</body>
+
+</html>

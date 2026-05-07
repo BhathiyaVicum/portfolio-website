@@ -688,6 +688,23 @@ footer {
   color: var(--text-muted);
 }
 
+.btn-view-more {
+  background-color: var(--dark-card);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  color: var(--text-primary);
+  transition: all .5s ease;
+  display: inline-block;
+}
+
+.btn-view-more:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+
+}
+
 /* For small screens */
 @media (max-width: 992px) {
 
