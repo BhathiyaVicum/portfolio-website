@@ -96,6 +96,18 @@ const projectsData = [
         liveLink: null,
         githubLink: "https://github.com/BhathiyaVicum/Music-Player-Web-App",
         linkedinLink: null
+    },
+    {
+        id: 9,
+        title: "ZenticAI UI/UX Design",
+        category: "UI/UX Design",
+        image: "images/project-imgs/project5.png",
+        technologies: ["Figma"],
+        description: "Designed and prototyped a modern UI for the ZenticAI application using Figma.",
+        longDescription: "Designed and prototyped a modern UI for the ZenticAI application using Figma.",
+        liveLink: "https://www.behance.net/gallery/249278925/Case-Study-ZenticAI-Document-Intelligence-Platform",
+        githubLink: null,
+        linkedinLink: null
     }
     
 ];
