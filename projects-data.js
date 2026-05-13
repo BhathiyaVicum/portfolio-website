@@ -108,6 +108,18 @@ const projectsData = [
         liveLink: "https://www.behance.net/gallery/249278925/Case-Study-ZenticAI-Document-Intelligence-Platform",
         githubLink: null,
         linkedinLink: null
+    },
+    {
+        id: 10,
+        title: "Heart Disease Prediction System",
+        category: "ML",
+        image: "images/project-imgs/project6.png",
+        technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+        description: "Developed a machine learning model to predict the likelihood of heart disease based on patient data.",
+        longDescription: "Developed a machine learning model to predict the likelihood of heart disease based on patient data. Implemented various algorithms and evaluated their performance to select the best model.",
+        liveLink: null,
+        githubLink: "https://github.com/BhathiyaVicum/heart-disease-risk-predictor",
+        linkedinLink: null
     }
     
 ];
