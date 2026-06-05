@@ -1,5 +1,5 @@
 * {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Google Sans", sans-serif;
 }
 
 html {
@@ -7,28 +7,15 @@ html {
   scroll-padding-top: 80px;
 }
 
-.logo-text {
+.logo-bracket {
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -0.02em;
-    position: relative;
-    display: inline-block;
+    color: var(--primary);
 }
 
-/* Static underline - no motion */
-.logo-text::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #4f46e5;
-    border-radius: 3px;
+.logo-bracket span {
+    color: var(--text-primary);
+    margin: 0 2px;
 }
 
 :root {
@@ -92,7 +79,7 @@ body.projects-page {
   border-radius: 10px;
   min-width: 80px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   padding: 4px 12px;
   line-height: 1.5;
   font-size: 15px;
@@ -102,6 +89,7 @@ body.projects-page {
 .nav-link:hover {
   background-color: white;
   color: var(--dark-card-hover) !important;
+  font-weight: 500;
 }
 
 .navbar .nav-link.active {
@@ -158,7 +146,7 @@ body.projects-page {
 }
 
 .hero-img {
-  max-width: 320px;
+  max-width: 300px;
   height: auto;
   border-radius: 20px;
   transition: all 0.5s ease;

@@ -93,10 +93,13 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="projects-data.js"></script>
     <script>
-        // Initialize AOS
+        // Initialize AOS with smoother, consistent motion for dynamic content
         AOS.init({
-            duration: 900,
-            once: true
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+            mirror: false
         });
 
         // Function to render projects
@@ -110,7 +113,6 @@
             }
 
             projectsToRender.forEach(project => {
-                // Create the technology badges HTML
                 const techBadges = project.technologies.map(tech =>
                     `<span class="techn-box me-1 mb-1">${tech}</span>`
                 ).join('');
@@ -147,6 +149,10 @@
                     </div>
                 `;
                 container.innerHTML += projectCard;
+            });
+
+            requestAnimationFrame(function () {
+                AOS.refresh();
             });
 
             // Add click event listeners to Read More buttons that open the modal
