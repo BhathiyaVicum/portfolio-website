@@ -66,7 +66,7 @@ const projectsData = [
         title: "Sales Analysis System",
         category: "Desktop App",
         image: "images/project-imgs/2.png",
-        technologies: ["Java", "MySQL","Swing"],
+        technologies: ["Java", "MySQL", "Swing"],
         description: " The system automates the manual sales data analysis process, providing management with actionable insights for strategic decision-making.",
         longDescription: "Designed and prototyped a mobile barber appointment booking system using Figma. Created multiple UI iterations and improved design based on user feedback.",
         liveLink: null,
@@ -120,6 +120,19 @@ const projectsData = [
         liveLink: null,
         githubLink: "https://github.com/BhathiyaVicum/heart-disease-risk-predictor",
         linkedinLink: null
+    },
+    ,
+    {
+        id: 11,
+        title: "Food Shop Sales Analysis Dashboard",
+        category: "Analytics",
+        image: "images/project-imgs/project7.jpg",
+        technologies: ["Power BI", "DAX"],
+        description: "Power BI dashboard suite analyzing food retail sales data with executive KPIs, product performance, sales forecasting, and regional insights.",
+        longDescription: "Designed a complete Power BI dashboard solution to analyze sales data from a food retail business as part of a BPS assignment. The project includes four interactive dashboards: Executive Dashboard (overall business performance and KPIs), Product Performance Dashboard (revenue, quantity, and product insights), Sales Trends & Forecasting Dashboard (monthly trends and future predictions), and Regional Sales Analysis Dashboard (sales distribution across regions). Key insights included identifying top-selling and low-performing products, analyzing customer buying patterns and sales trends, comparing regional performance for better decision-making, and exploring relationships between price and sales volume. This project strengthened skills in data visualization, dashboard design, and business analytics using Power BI.",
+        liveLink: null,
+        githubLink: null,
+        linkedinLink: "https://www.linkedin.com/posts/bhathiya-h-b4749b332_powerbi-dataanalytics-businessintelligence-ugcPost-7446803990798901248-BdY8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFO4uacBKGG8cJK6P9D80Nyk0oUHOdQIIj0"
     }
-    
+
 ];
