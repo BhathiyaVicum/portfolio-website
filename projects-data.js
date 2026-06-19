@@ -14,7 +14,19 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 2,
+        "id": 2,
+        "title": "ZenticAI - Document Chat Platform",
+        "category": "Web App",
+        "image": "images/project-imgs/zentic.png",
+        "technologies": ["React", "Tailwind CSS", "Supabase", "Node.js", "Express"],
+        "description": "Built a RAG platform that allows users to upload PDFs and ask questions using AI with vector search and local embeddings.",
+        "longDescription": "ZenticAI is a production-grade RAG (Retrieval-Augmented Generation) platform that transforms static PDF documents into interactive, AI-powered conversations. Users can upload research papers, lecture notes, or any PDF and ask questions naturally. The system uses local embeddings (384-dim MiniLM) and cosine similarity for semantic vector search, ensuring answers are contextually relevant. Integrated Groq's Llama 3.3 70B for fast, accurate AI responses based only on the user's document. Features include authentication, document management, persistent chat history, and a responsive UI built with React and Tailwind CSS.",
+        "liveLink": null,
+        "githubLink": "https://github.com/BhathiyaVicum/zentic-ai",
+        "linkedinLink": null
+    },
+    {
+        id:3,
         title: "Car Sale UI Design",
         category: "UI/UX Design",
         image: "images/project-imgs/project-2.png",
@@ -26,7 +38,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 3,
+        id: 4,
         title: "POS System",
         category: "Desktop App",
         image: "images/project-imgs/project3.png",
@@ -38,7 +50,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 4,
+        id: 5,
         title: "Portfolio Website",
         category: "Web App",
         image: "images/project-imgs/project4.png",
@@ -50,7 +62,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 5,
+        id: 6,
         title: "Mr.Barber UI/UX Design",
         category: "UI/UX Design",
         image: "images/project-imgs/1.png",
@@ -62,7 +74,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 6,
+        id: 7,
         title: "Sales Analysis System",
         category: "Desktop App",
         image: "images/project-imgs/2.png",
@@ -74,7 +86,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 7,
+        id: 8,
         title: "Prompt Enhancer",
         category: "Web App",
         image: "images/project-imgs/3.png",
@@ -86,7 +98,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 8,
+        id: 9,
         title: "Music Player App",
         category: "Web App",
         image: "images/project-imgs/4.png",
@@ -98,7 +110,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 9,
+        id: 10,
         title: "ZenticAI UI/UX Design",
         category: "UI/UX Design",
         image: "images/project-imgs/project5.png",
@@ -110,7 +122,7 @@ const projectsData = [
         linkedinLink: null
     },
     {
-        id: 10,
+        id: 11,
         title: "Heart Disease Prediction System",
         category: "ML",
         image: "images/project-imgs/project6.png",
@@ -123,7 +135,7 @@ const projectsData = [
     },
     ,
     {
-        id: 11,
+        id: 12,
         title: "Food Shop Sales Analysis Dashboard",
         category: "Analytics",
         image: "images/project-imgs/project7.jpg",
