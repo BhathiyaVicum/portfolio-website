@@ -8,14 +8,14 @@ html {
 }
 
 .logo-bracket {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
 }
 
 .logo-bracket span {
-    color: var(--text-primary);
-    margin: 0 2px;
+  color: var(--text-primary);
+  margin: 0 2px;
 }
 
 :root {
@@ -152,7 +152,7 @@ body.projects-page {
   left: 0;
   width: 200%;
   height: 200%;
-  background-image: 
+  background-image:
     linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -167,7 +167,7 @@ body.projects-page {
   left: 0;
   width: 200%;
   height: 200%;
-  background-image: 
+  background-image:
     linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
   background-size: 120px 120px;
@@ -189,6 +189,7 @@ body.projects-page {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(-60px, -60px);
   }
@@ -198,15 +199,19 @@ body.projects-page {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(120px, 120px);
   }
 }
 
 @keyframes pulseDots {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.6;
   }
@@ -790,7 +795,82 @@ footer {
   background-color: var(--primary);
   color: white;
   border-color: var(--primary);
+}
 
+/* Tech Stack Category Tabs */
+.tech-category-tabs {
+  margin-bottom: 1.5rem;
+}
+
+.tech-category-btn {
+  background: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-category-btn:hover {
+  background: var(--dark-card-hover);
+  border-color: var(--primary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.tech-category-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Tech Category Content */
+.tech-category-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-category-content.active {
+  display: block;
+  opacity: 1;
+}
+
+.tech-item-featured {
+  background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-card-hover) 100%);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+  padding: 1.2rem 1rem !important;
+}
+
+.tech-item-featured .tech-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-item-featured .tech-text {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.tech-item {
+    background: linear-gradient(135deg, var(--dark-card) 0%, var(--dark-card-hover) 100%);
+    border: 1px solid var(--primary);
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.1);
+    transition: all .5s ease !important;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 12px rgba(99, 102, 241, 0.25);
 }
 
 /* For small screens */
@@ -939,7 +1019,7 @@ footer {
   .contact-container {
     padding: 20px;
   }
-  
+
   .contact-details h5 {
     font-size: 18px;
     margin-bottom: 0.1rem;
@@ -977,6 +1057,34 @@ footer {
 
   body.projects-page {
     padding-top: 5px;
+  }
+
+  .tech-category-tabs {
+    gap: 6px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .tech-category-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .tech-category-btn i {
+    font-size: 18px;
+  }
+
+  .tech-item-featured {
+    padding: 0.7rem 0.5rem !important;
+  }
+
+  .tech-item-featured .tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-item-featured .tech-text {
+    font-size: 14px;
   }
 
 }
